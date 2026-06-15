@@ -12,4 +12,6 @@ import com.RewardsManagement.rewards.entity.Transaction;
 public interface RewardsRepository extends JpaRepository<Transaction, Long> {
 
 	List<Transaction> findByDateBetween(LocalDate start, LocalDate end);
+
+	List<Transaction> findByCustomerIdAndDateBetween(String customerId, LocalDate startDate, LocalDate endDate);
 }

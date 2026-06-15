@@ -26,7 +26,14 @@ public class Transaction {
 
 	@Column(nullable = false)
 	private LocalDate date;
-	
+
 	@Column(nullable = false)
 	private double pointsEarned;
+
+	public Transaction(String customerId, double amount, LocalDate date, double pointsEarned) {
+		this.customerId = customerId;
+		this.amount = amount;
+		this.date = date;
+		this.pointsEarned = pointsEarned;
+	}
 }
